@@ -27,7 +27,7 @@
   gulp.task('scripts', function () {
     return gulp.src('scripts/**/*.js')
       .pipe($.sourcemaps.init())
-      .pipe($.babel())
+      .pipe($.babel().on('error', $.util.log))
       .pipe($.wrapCommonjs({
         baseDir: 'scripts',
         pathModifier: function (path) {
