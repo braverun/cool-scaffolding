@@ -7,6 +7,9 @@ if [[ -d .git && `git config --get remote.origin.url` == *"jacobthemyth/cool-sca
   rm -rf .git
 fi
 
+echo "Deleting setup script"
+rm -- "$0"
+
 if [ ! -d .git ]; then
   echo "Initializing git repository"
   git init
@@ -34,6 +37,3 @@ if hash npm 2>/dev/null; then
   echo "Installing node modules from package.json"
   npm install
 fi
-
-echo "Deleting setup script"
-rm -- "$0"
