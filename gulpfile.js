@@ -29,7 +29,7 @@
       .pipe($.sourcemaps.init())
       .pipe($.babel().on('error', $.util.log))
       .pipe($.wrapCommonjs({
-        baseDir: 'scripts',
+        relativePath: 'scripts',
         pathModifier: function (path) {
           return path.replace(/.js$/, '');
         }
