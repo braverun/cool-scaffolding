@@ -53,7 +53,9 @@
       .pipe(reload({stream: true}));
   });
 
-  gulp.task('serve', ['scripts', 'templates', 'styles'], function () {
+  gulp.task('build', ['scripts', 'templates', 'styles'], function(){});
+
+  gulp.task('serve', ['build'], function () {
     browserSync({
       notify: false,
       port: 9000,
