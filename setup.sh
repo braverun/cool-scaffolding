@@ -10,6 +10,9 @@ fi
 echo "Deleting setup script"
 rm -- "$0"
 
+echo "Customizing README.md"
+echo "# $(basename `pwd`)" > README.md
+
 if [ ! -d .git ]; then
   echo "Initializing git repository"
   git init
