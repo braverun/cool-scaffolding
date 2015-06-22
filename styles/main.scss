@@ -1,48 +1,21 @@
-@import '../bower_components/pure/pure';
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
-$light-gray: #e0e0e0;
-$medium-gray: #cbcbcb;
+// Typography
+$base-font-family: $helvetica;
 
-* {
-  margin: 0;
-  padding: 0;
-}
+// Colors
+$blue: #477dca;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$very-light-gray: #fafafa;
 
-.app-container {
-  @include outer-container;
-  margin-top: 1em;
-}
+$base-font-color: $dark-gray;
+$base-background-color: $very-light-gray;
 
-.menu {
-  @include span-columns(8);
-  list-style: none;
-}
-
-.menu-category-heading {
-  background-color: $light-gray;
-  border: 1px solid $medium-gray;
-  text-align: center;
-}
-
-.menu-category-items {
-  list-style: none;
-  border-right: 1px solid $light-gray;
-  border-left: 1px solid $light-gray;
-  border-bottom: 1px solid $light-gray;
-  margin-bottom: 2em;
-}
-
-.order {
-  @include span-columns(4);
-}
-
-.order-items {
-  @extend .pure-table;
-}
-
-.order-submit {
-  @extend .pure-button;
-  @extend .pure-button-primary;
+body {
+  font-family: $base-font-family;
+  background-color: $base-background-color;
+  color: $base-font-color;
 }
